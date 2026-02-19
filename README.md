@@ -9,7 +9,7 @@ This project investigates drivers of funding rates in ETH perpetual markets. It 
 ## Table of Contents
 - [Data](#data)
 - [Methodology](#methodology)
-- [Key Findings](#key-findings)
+- [Results](#results)
 - [Next Steps](#next-steps)
 
 ## Data
@@ -23,7 +23,7 @@ Sources:
 - ETH futures 5min candlesticks (Binance, used as volatility proxy)
 
 Funding_t corresponds to positioning accumulated during [t−1, t].
-Binance futures are used as a high-availability proxy for volatility estimation. Invariance was verified through Pearson correlation of >0.99 for overlapping period N = xxx observations, p < 1e-16.
+Binance futures are used as a high-data-availability proxy for volatility estimation. Invariance was verified through Pearson correlation for overlapping period of 60 days with 5-min returns frequency; resulting in a correlation coefficient of >0.99 and p<1e-16.
 
 ## Methodology
 ### 1. Realized Volatility
@@ -76,24 +76,14 @@ $$
 
 ## Results
 
-Corr(RV_MA24, funding sign) = x
+Funding signs correlate weakly, but significantly with RV, which becomes stronger correlated in right-tail volatility regimes. ΔOI has a weak but significant positive correlation with funding signs. RV and ΔOI are practically approximately independent:
 
-Corr(RV_MA24, regime indicator) = y
-
-t-stat = z
-
-| Metric             | Value |
-| ------------------ | ----- |
-| Corr(RV, funding)  | x     |
-| Corr(ΔOI, funding) | y     |
-| Median streak      | 5     |
-| Regime threshold N | 21    |
-
-
-
-RV shows that during periods of persisting high volatility (RV MA24 90th pct) there is a higher correlation with negative funding rate streaks during 4 out of 6 observed outlier periods.
-
-During increasing OI periods, funding rates are in 2 out of 3 observations stable positive.
+| Pair             | Pearson co. | p |
+| ------------------ | ----- |---|
+| (RV, funding sign)  | -0.16 | <1e-25 |
+| (RV MA[24h]>90p, funding sign) | -0.36  | <1e-14 |
+| (ΔOI, funding sign) | 0.11  | <1e-6|
+| (RV, ΔOI) | -0.04  | 0.08 |
 
 ![Funding vs RV vs OI](figures/00_funding_rate_oi_rv_eth.png)
 
