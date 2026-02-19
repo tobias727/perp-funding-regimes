@@ -1,6 +1,4 @@
-[![mypy](https://img.shields.io/badge/type_checking-mypy-blue.svg)](http://mypy-lang.org/)
-[![linting: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/pylint-dev/pylint)
-[![code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+![Python 3.12](https://img.shields.io/badge/python-3.12-blue?logo=python&logoColor=white)
 
 
 # Funding Regimes in ETH Perpetuals
