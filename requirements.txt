@@ -1,0 +1,8 @@
+hyperliquid-python-sdk==0.21.0
+pandas==3.0.0
+numpy==2.4.2
+mypy==1.15.0
+matplotlib==3.10.8
+python-dotenv==1.2.1
+binance-sdk-derivatives-trading-usds-futures==7.1.0
+scipy==1.17.0
