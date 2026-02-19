@@ -85,7 +85,8 @@ Funding signs correlate weakly, but significantly with RV, which becomes stronge
 | (ΔOI, funding sign) | 0.11  | <1e-6|
 | (RV, ΔOI) | -0.04  | 0.08 |
 
-![Funding vs RV vs OI](figures/00_funding_rate_oi_rv_eth.png)
+![Funding vs RV](figures/01_funding_rate_vs_rv_eth.png)
+![Funding vs OI](figures/02_funding_rate_vs_oi_eth.png)
 
 
 ## Next Steps
